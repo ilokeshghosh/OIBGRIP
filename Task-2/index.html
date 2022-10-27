@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio || TASK-2</title>
+
+    <style>
+      body {
+        background-image: url("back3.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .nav_head{
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        /* position:absolute; */
+        z-index: 3;
+        border: 2px solid #346767;
+        backdrop-filter: blur(100px);
+        border-radius: 10px;
+      }
+      /* .topnav {
+       
+       
+      } */
+
+      .topnav a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 25px;
+      }
+
+      .topnav a:hover {
+        background-color: #5837d0;
+        border-radius: 15px;
+        color: white;
+      }
+
+      .topnav a.active {
+        background-color: #7de5ed;
+        border-radius: 15px;
+        color: black;
+      }
+      .home {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        padding: 0 15rem;
+      }
+      .home h3 {
+        font-size: 5.5rem;
+        color: #346767;
+      }
+      .home h1 {
+        font-size: 2rem;
+        color: #a5c9ca;
+      }
+
+      .home h1 span {
+        color: #5837d0;
+      }
+
+      .home button {
+        border: 2px solid #346767;
+        background-color: #92a9bd;
+        padding: 10px;
+        margin: 7px;
+        font-size: 15px;
+      }
+      .home img {
+        border: 5px solid #346767;
+        height: 540px;
+        width: 540px;
+        float: right;
+        /* margin-right: 50px; */
+      }
+      .heading{
+        /* border: 2px solid red; */
+        color: #5837d0;
+        text-align: center;
+        font-size: 50px;
+      }
+      .about .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+      }
+      .about .row .info {
+          flex: 1 1 48rem;
+          padding: 2rem 1rem;
+          padding-left: 6rem;
+          border: 5px solid #346767;
+          border-radius: 10px;
+          backdrop-filter: blur(70px);
+
+        }
+        .about .row .info p{
+            font-size: 2rem;
+            color: #eee;
+
+        }
+        .about .down-cv{
+            text-align: center;
+          
+        }
+        .about .down-cv a button{
+            border: 2px solid #346767;
+            border-radius: 5px;
+            background-color: #92a9bd;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .background .box-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 1rem 0;
+          padding-left: 3rem;
+
+          border: 5px solid #346767;
+          border-radius: 10px;
+          backdrop-filter: blur(70px);
+
+        }
+        
+        .background .box-container .box {
+          width: 27rem;
+          margin: 4rem 1rem;
+          padding-left: 4rem;
+          border-left: 0.2rem solid #fff;
+          position: relative;
+
+
+          
+        }
+        .background .box-container .box span {
+          font-size: 1.3rem;
+          background: #222;
+          color: #fff;
+          border-radius: 5rem;
+          padding: 0.5rem 2.5rem;
+        }
+         
+        .background .box-container .box h3 {
+          font-size: 2rem;
+          color: #fff;
+          padding-top: 1.5rem;
+        }
+        .background .box-container .box p {
+          font-size: 1.4rem;
+          color: #eee;
+          padding: 1rem 0;
+        }
+
+
+        .skills .skills-content .column {
+            text-align: center;
+            padding: 100px;
+
+            border: 5px solid #346767;
+          border-radius: 10px;
+          backdrop-filter: blur(70px);
+
+        }
+        .skills .skills-content{
+            color: #fff;
+            
+        }
+        .skills .skills-content .right .bars {
+            margin-bottom: 15px;
+        }
+        .skills .skills-content .right .info {
+            display: flex;
+            margin-bottom: 5px;
+            align-items: center;
+            justify-content: space-between;
+        }
+         
+        .skills .skills-content .right span {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        .skills .skills-content .right .line {
+            height: 5px;
+            width: 100%;
+            background: rgb(255, 255, 255);
+            position: relative;
+        }
+        .skills .skills-content .right .line::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: #5837d0;
+        }
+        .skills-content .right .html::before {
+            width: 90%;
+        }
+        .skills-content .right .css::before {
+            width: 70%;
+        }
+        .skills-content .right .js::before {
+            width: 80%;
+        }
+        .skills-content .right .php::before {
+            width: 70%;
+        }
+        .skills-content .right .mysql::before {
+            width: 80%;
+        }
+        .skills-content .right .java::before {
+            width: 70%;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <!-- header section starts  -->
+    <section class="nav_head">
+      <div class="topnav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#background">Background</a>
+        <a href="#skills">Skills</a>
+      
+      </div>
+    </section>
+
+    <!-- home section starts  -->
+
+    <section>
+      <div class="home" id="home">
+        <h3>HI THERE !</h3>
+        <h1>I'M <span> LOKESH GHOSH</span></h1>
+        <a href="#contact"
+          ><button class="btn">hire me <i class="fas fa-user"></i></button
+        ></a>
+
+        <section>
+          <a href="https://www.linkedin.com/in/lokeshghosh/" target="blank"
+            ><button class="btn">
+              Linkedin <i class="fab fa-linkedin"></i></button
+          ></a>
+        </section>
+        <section>
+          <img src="dp.jpg" alt="error" />
+        </section>
+      </div>
+    </section>
+
+    <!-- about section starts here -->
+    <section>
+      <div class="about" id="about">
+        <h1 class="heading"><span>About</span> Me</h1>
+        <div class="row">
+          <div class="info">
+            <p>HEllO!</p>
+            <p>
+              MY NAME IS LOKESH GHOSH. CURRENTLY, I'M PURSUING BACHELOR OF
+              COMPUTER APPLICATION FROM MAULANA ABUL KALAM AZAD UNIVERSITY OF
+              TECHNOLOGY, WEST BENGAL. I AM VERY MUCH INTERESTED IN WEB
+              DEVELOPMENT AND DESIGN. YOU CAN GO THROUGH MY RESUME BELOW HERE FOR
+              DETAILS OF MY BACKGROUND AND DON'T FORGET TO CHECK MY PROJECTS :)
+            </p>
+          </div>
+        </div>
+        <div class="down-cv">
+          <a href="https://drive.google.com/file/d/1QTMJkpSIcFZsb75ottWPRKqK8T4h1QU5/view?usp=sharing"
+            ><button class="btn">
+              Download Resume <i class="fas fa-download"></i></button
+          ></a>
+        </div>
+      </div>
+    </section>
+
+      <!-- background section starts  -->
+      <section class="background" id="background">
+
+        <h1 class="heading"> My <span>background</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2018</span>
+                <h3>Secondery</h3>
+                <p>From- Central Board of Secondary Education, <br> Gov. of India</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2020</span>
+                <h3>Higher Secondery</h3>
+                <p>From- Central Board of Secondary Education, <br> Gov. of India</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2020-2023</span>
+                <h3>Graduation</h3>
+                <p>bachelor of computer application, <br> Maulana Abul Kalam Azad University of Technology, <br> West Bengal, India</p>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- skills section starts  -->
+<section class="skills" id="skills">
+
+    <h1 class="heading"> My <span>Skills</span> </h1>
+    <div class="skills-content">
+        <div class="column right">
+            <div class="bars">
+                <div class="info">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+                <div class="line html"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>CSS</span>
+                    <span>70%</span>
+                </div>
+                <div class="line css"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>JavaScript</span>
+                    <span>80%</span>
+                </div>
+                <div class="line js"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>PHP</span>
+                    <span>70%</span>
+                </div>
+                <div class="line php"></div>
+            </div>
+            <div class="bars">
+                <div class="info">
+                    <span>MySQL</span>
+                    <span>80%</span>
+                </div>
+                <div class="line mysql"></div>
+            </div>
+
+            <div class="bars">
+                <div class="info">
+                    <span>Java</span>
+                    <span>70%</span>
+                </div>
+                <div class="line java"></div>
+            </div>
+
+          
+        </div>
+
+
+</section>
+
+
+
+
+
+
+  </body>
+</html>
